@@ -193,7 +193,7 @@ function stopTimer() {
   setTime();
   localStorage.setItem("mostRecentScore", score);
   //go to the end page
-  return window.location.assign("/result.html");
+  return window.location.assign("./result.html");
 }
 
 function playCorrectAudio() { 
