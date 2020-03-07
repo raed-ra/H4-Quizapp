@@ -22,10 +22,10 @@ saveScoreBtn.addEventListener("click", () => {
     name: username.value
   };
   highScores.push(score);  //adds the new score to the array of scores
-  highScores.sort((a, b) => b.score - a.score);  //function for Java scrip which you can define your sortation: if the b score is higher than a score it will put b before a.
+  highScores.sort((a, b) => b.score - a.score);  //function for Java scrip which you can define your sortation: if the "b" score is higher than "a" score it will put b before a.
   highScores.splice(5);  // it will take the bottom item - 5th index out 
 
   localStorage.setItem("highScores", JSON.stringify(highScores)); 
-  window.location.assign("/highscores.html");
+  window.location.assign("./highscores.html");
 });
  
