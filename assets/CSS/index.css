@@ -1,0 +1,130 @@
+:root {
+  background-color: #ffffff;
+  font-size: 50%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 5.4rem;  /* 54 pixels */
+  color: #0062d1;
+  margin-bottom: 5rem;
+}
+
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 4.2rem;   /* 42 pixels */
+  margin-bottom: 4rem;  /* 40 pixels */
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;  /* 28 pixels */
+  font-weight: 500;
+}
+
+/* all the utilities */
+
+.container {
+  width: 70vw;  /*to ensure all page taken*/
+  height: 70vh; 
+  display: flex;  /*changes everything in the container to flexbox*/
+  justify-content: center;     /*everything in the flex container to go center horizentally*/ 
+  align-items: center;  /*everything in the flex container to go center vertifcally*/ 
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;  /*gives some padding to prevent the content be right against the edge
+}
+
+.container > * {
+  width: 100%;     /*all the childs are 100% so they can be centered*/
+}
+
+.flex-column {     /*flexbox direction goes vertical instead of horizental so things can stack on top of each other*/
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;   /*aligns justify content and align item to center*/
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;    /*justify content center*/
+}
+
+.text-center {   /*align content center*/
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* styling the buttons */
+.btn {
+  font-size: 4rem;
+  padding: 1rem 0;
+  width: 40rem;
+  text-align: center;
+  border: 0.1rem solid #0062d1;
+  border-radius: 10rem;
+  margin-bottom: 1rem;
+  text-decoration: none;  /*no default underlinging for the tags*/
+  color: #ffffff;
+  background-color: #0062d1;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(24, 136, 241, 0.5);
+  transform: translateY(-0.2rem);
+  transition: transform 100ms;
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* FORMS */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 4rem;
+  width: 40rem;
+  padding: 1.5rem;
+  font-size: 4rem;
+  text-align: center;
+  border: none;
+  border-radius: 10rem;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+  color: #aaa;  /*changes the place holder color*/
+}
