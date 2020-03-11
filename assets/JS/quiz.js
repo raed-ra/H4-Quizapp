@@ -30,7 +30,7 @@ var category = localStorage.getItem("category");
 console.log(category)
 switch (category) {
   case "Javascript":
-    var database = "./assets/js/questions.json"  ///local data base
+    var database = "questions.json"  ///local data base
     fetch(database)
     .then(res => {
       return res.json();   //gets the body from the source and puts in a json
