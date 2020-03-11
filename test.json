@@ -1,0 +1,32 @@
+(30) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0: {question: "Which internet company began life as an online bookstore called &#039;Cadabra&#039;?", answer: 3, choice1: "eBay", choice2: "Overstock", choice3: "Amazon", …}
+1: {question: "Whistler was the codename of this Microsoft Operating System.", answer: 1, choice1: "Windows XP", choice2: "Windows 2000", choice3: "Windows 7", …}
+2: {question: "Moore&#039;s law originally stated that the number…rs on a microprocessor chip would double every...", answer: 3, choice1: "Four Years", choice2: "Two Years", choice3: "Year", …}
+3: {question: "What does AD stand for in relation to Windows Operating Systems? ", answer: 3, choice1: "Alternative Drive", choice2: "Automated Database", choice3: "Active Directory", …}
+4: {question: "When was the programming language &quot;C#&quot; released?", answer: 2, choice1: "1998", choice2: "2000", choice3: "1999", …}
+5: {question: "On which computer hardware device is the BIOS chip located?", answer: 3, choice1: "Hard Disk Drive", choice2: "Central Processing Unit", choice3: "Motherboard", …}
+6: {question: "All of the following programs are classified as raster graphics editors EXCEPT:", answer: 1, choice1: "Inkscape", choice2: "Paint.NET", choice3: "GIMP", …}
+7: {question: "What was the name given to Android 4.3?", answer: 3, choice1: "Lollipop", choice2: "Nutella", choice3: "Jelly Bean", …}
+8: {question: "Which of these is the name for the failed key escr…troduced by the National Security Agency in 1993?", answer: 2, choice1: "Enigma Machine", choice2: "Clipper Chip", choice3: "Skipjack", …}
+9: {question: "On which day did the World Wide Web go online?", answer: 3, choice1: "December 17, 1996", choice2: "November 12, 1990", choice3: "December 20, 1990", …}
+10: {question: "While Apple was formed in California, in which western state was Microsoft founded?", answer: 1, choice1: "New Mexico", choice2: "Washington", choice3: "Colorado", …}
+11: {question: "What does the acronym CDN stand for in terms of networking?", answer: 2, choice1: "Content Distribution Network", choice2: "Content Delivery Network", choice3: "Computational Data Network", …}
+12: {question: "How many cores does the Intel i7-6950X have?", answer: 2, choice1: "12", choice2: "10", choice3: "8", …}
+13: {question: "Which one of these is not an official development name for a Ubuntu release?", answer: 2, choice1: "Trusty Tahr", choice2: "Mystic Mansion", choice3: "Utopic Unicorn", …}
+14: {question: "Which coding language was the #1 programming language in terms of usage on GitHub in 2015?", answer: 2, choice1: "C#", choice2: "JavaScript", choice3: "Python", …}
+15: {question: "What is the name of the default theme that is installed with Windows XP?", answer: 3, choice1: "Neptune", choice2: "Whistler", choice3: "Luna", …}
+16: {question: "In the programming language &quot;Python&quot;, wh…lay the string &quot;Hello World&quot; correctly?", answer: 3, choice1: "console.log(&quot;Hello World&quot;)", choice2: "echo &quot;Hello World&quot;", choice3: "print(&quot;Hello World&quot;)", …}
+17: {question: "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?", answer: 1, choice1: "&lt;marquee&gt;&lt;/marquee&gt;", choice2: "&lt;scroll&gt;&lt;/scroll&gt;", choice3: "&lt;move&gt;&lt;/move&gt;", …}
+18: {question: "What is the correct term for the metal object in b…the CPU and the CPU fan within a computer system?", answer: 2, choice1: "CPU Vent", choice2: "Heat Sink", choice3: "Temperature Decipator", …}
+19: {question: "In programming, the ternary operator is mostly defined with what symbol(s)?", answer: 3, choice1: "??", choice2: "if then", choice3: "?:", …}
+20: {question: "Which of these programming languages is a low-level language?", answer: 3, choice1: "Python", choice2: "C#", choice3: "Assembly", …}
+21: {question: "What does &quot;LCD&quot; stand for?", answer: 1, choice1: "Liquid Crystal Display", choice2: "Language Control Design", choice3: "Last Common Difference", …}
+22: {question: "Which operating system was released first?", answer: 3, choice1: "Windows", choice2: "Linux", choice3: "Mac OS", …}
+23: {question: "Which of these people was NOT a founder of Apple Inc?", answer: 1, choice1: "Jonathan Ive", choice2: "Steve Jobs", choice3: "Ronald Wayne", …}
+24: {question: "When did the online streaming service &quot;Mixer&quot; launch?", answer: 2, choice1: "2013", choice2: "2016", choice3: "2009", …}
+25: {question: "Which programming language was developed by Sun Microsystems in 1995?", answer: 1, choice1: "Java", choice2: "Python", choice3: "Solaris OS", …}
+26: {question: "The name of technology company HP stands for what?", answer: 1, choice1: "Hewlett-Packard", choice2: "Howard Packmann", choice3: "Husker-Pollosk", …}
+27: {question: "In programming, what do you call functions with the same name but different implementations?", answer: 3, choice1: "Overriding", choice2: "Abstracting", choice3: "Overloading", …}
+28: {question: "What does RAID stand for?", answer: 3, choice1: "Rapid Access for Indexed Devices", choice2: "Range of Applications with Identical Designs", choice3: "Redundant Array of Independent Disks", …}
+29: {question: "How many bytes are in a single Kibibyte?", answer: 2, choice1: "2400", choice2: "1024", choice3: "1000", …}
+length: 30

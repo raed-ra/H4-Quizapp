@@ -11,9 +11,26 @@
     <main class="container">
       <div id="home" class="flex-center flex-column">
         <h1>Quiz Challenge</h1>
-        <a class="btn" href="./quiz.html">Play</a>
+        <a class="btn" id="play" href="./quiz.html">Play</a>
         <a class="btn" href="./highscores.html">Scoreboard</a>
+        <form> 
+          <row> 
+            <label for="mute">Mute</label> <input type="checkbox" id="mute">
+          </row>
+          <row> 
+            <div class="dropdown display" id="category">
+              <button class="dropbtn">Catergory 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content display" id="dropdown-content">
+                <a id="Javascript">Javascript (Local Database)</a>
+                <a id="Nature">Nature (External DB)</a>
+                <a id="Computer">Computer (External DB) </a>
+              </div>
+            </div> 
+        </form>
       </div>
     </main>
+    <script src="./assets/JS/index.js"></script>
   </body>
 </html>

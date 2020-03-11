@@ -13,81 +13,48 @@ let score = 0;
 let questionCounter = 0;  /*tells us what question we are on*/
 let availableQuesions = [];    /*copy of full question set, we will take questions out of this as we use them so we always have unique question*/
 let questions = [];
-let mute = localStorage.getItem("mute")
-
-let delaytime = 2500
-if (mute === "false") {
-  delaytime = 1000
-}
 
 let totalSeconds = 0;
 let secondsElapsed = 0;
 let interval;
-// const database = "./assets/js/questions.json"
  
-let url=""
-var category = localStorage.getItem("category");
-console.log(category)
-switch (category) {
-  case "Javascript":
-    var database = "./assets/js/questions.json"  ///local data base
-    fetch(database)
-    .then(res => {
-      return res.json();   //gets the body from the source and puts in a json
-    })
-    .then(loadedQuestions => { //then json will be referred to as loaded questions
-      questions = loadedQuestions;
-      startGame();
-    })
-    .catch(err => {   //error scenario, if we give wrong path to the file it'll give an error so we know whats going on. 
-      console.error(err);
-    });
-    
-  case "Computer":
-    url = 'https://opentdb.com/api.php?amount=30&category=18&difficulty=medium&type=multiple' ;
-  case "Nature":
-    url = "https://opentdb.com/api.php?amount=30&category=17&difficulty=medium&type=multiple" ;
-   }
-  
-if (category!="Javascript") { 
-  console.log(category)
-  console.log(url)
-  fetch(url)
-    .then(res => {
-      return res.json();   //gets the body from the source and puts in a json
-    })
-    .then(loadedQuestions => { //then json will be referred to as loaded questions
-      // questions = loadedQuestions;
-      questions = loadedQuestions.results.map(loadedQuestion => {
-        let formattedQuestion = {
-          question: loadedQuestion.question
-        };
-  
-        let answerChoices = [...loadedQuestion.incorrect_answers];
-        formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
-        answerChoices.splice(
-          formattedQuestion.answer - 1,
-          0,
-          loadedQuestion.correct_answer
-        );
-  
-        answerChoices.forEach((choice, index) => {
-          formattedQuestion["choice" + (index + 1)] = choice;
-        });
-  
-        return formattedQuestion;
-      });
-  
-      startGame();
-    })
-    .catch(err => {   //error scenario, if we give wrong path to the file it'll give an error so we know whats going on. 
-      console.error(err);
-    });
-  };
-//CONSTANTS
+// fetch(
+//   "https://opentdb.com/api.php?amount=30&category=18&difficulty=medium&type=multiple"
+// )
+fetch("./assets/js/questions.json").then(res => {
+    return res.json();   //gets the body from the source and puts in a json
+  })
+  .then(loadedQuestions => { //then json will be referred to as loaded questions
+    questions = loadedQuestions;
+    // questions = loadedQuestions.results.map(loadedQuestion => {
+    //   let formattedQuestion = {
+    //     question: loadedQuestion.question
+    //   };
 
+    //   let answerChoices = [...loadedQuestion.incorrect_answers];
+    //   formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+    //   answerChoices.splice(
+    //     formattedQuestion.answer - 1,
+    //     0,
+    //     loadedQuestion.correct_answer
+    //   );
+
+    //   answerChoices.forEach((choice, index) => {
+    //     formattedQuestion["choice" + (index + 1)] = choice;
+    //   });
+
+    //   return formattedQuestion;
+    // });
+
+    startGame();
+  })
+  .catch(err => {   //error scenario, if we give wrong path to the file it'll give an error so we know whats going on. 
+    console.error(err);
+  });
+
+//CONSTANTS
 let BONUS_POINT = 20;
-let MAX_QUESTIONS = 20;
+let MAX_QUESTIONS = 5;
 
 //****** ***********/
 //FUNCTIONS  - START
@@ -95,7 +62,6 @@ startGame = () => {
   questionCounter = 0;
   score = 0;
   availableQuesions = [...questions];  /*takes a full copy of available questions to available questions array*/
-  console.log(availableQuesions);
   getNewQuestion();
   game.classList.remove("hidden");  //this will only allow the quiz page appear if a new question has been loaded otherwise it'll show an empty place
   loader.classList.add("hidden");
@@ -112,7 +78,7 @@ getNewQuestion = () => {
     return window.location.assign("/result.html");
   }
   questionCounter++;  //It'll start with question 1 
-  progressText.innerText = `Question ${questionCounter}`;  //instead of progressText.innerText = questionCounter + "/" + MAX_QUESTIONS;
+  progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;  //instead of progressText.innerText = questionCounter + "/" + MAX_QUESTIONS;
   //Update the progress bar
   progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
@@ -144,12 +110,12 @@ choices.forEach(choice => {   //creating an event listener for an array instead 
     let classToApply = "incorrect";
       if (selectedAnswer == currentQuestion.answer) {
         classToApply = "correct";
-        if (mute==="false") { playCorrectAudio(); }
+        playCorrectAudio();
         incrementScore(BONUS_POINT);
       }
       if (classToApply == "incorrect") {
         secondsElapsed +=10;
-        if (mute==="false") { playWrongAudio(); }
+        playWrongAudio();
       }
     
 
@@ -158,7 +124,7 @@ choices.forEach(choice => {   //creating an event listener for an array instead 
     setTimeout(() => {   //runs a timer of 1000ms before removing class/color on the answer
       selectedChoice.parentElement.classList.remove(classToApply);  //removes the class
       getNewQuestion();
-    }, delaytime);
+    }, 2500);
   });
 });
 //***************** */ END event for the user when answers
