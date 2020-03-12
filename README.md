@@ -2,7 +2,7 @@
 
 Features:
 
-You can choose question categories.  Two categories download questions from another website using API.
+You can choose question categories.  Two categories download questions from another website(https://opentdb.com/) using API.
 One category has the questions stored in a JSON file locally to the index file.
 
 It has a CSS loader that will not allow load the next page until the quesions are availabe from the internet.
