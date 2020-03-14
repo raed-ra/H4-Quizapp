@@ -64,6 +64,8 @@ if (category!="Javascript") {
         };
   
         let answerChoices = [...loadedQuestion.incorrect_answers];
+        console.log(loadedQuestion.incorrect_answers);
+        console.log(answerChoices);
         formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
         answerChoices.splice(
           formattedQuestion.answer - 1,
